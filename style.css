@@ -1,0 +1,207 @@
+/* minimum requirements: 5 different CSS selectors, inline, internal and external styling, complementary colors, flexbox and/or bootstrap grid, 2 CSS animations */
+
+/* I can't get the side bar to be responsive under 413px. At 412px the link splits and wraps to next line on top of current pill shape. Unsure of how to fix. Responsive down to that size. */
+
+/* Attempted to fix with this */
+/* @media (max-width: 413px){
+    .sidebar {
+        width: 100px;
+    }
+} */
+
+/* This is the top banner portion of the page */
+.heroTitle{
+    /* border: 5px solid red; */
+    border-bottom: 5px dashed black;
+    background: yellow;
+    text-align:center;
+}
+
+/* This is the navigation menu on the left side of the page */
+.leftSideBar{
+    width: 30%; 
+    border-right: 5px dashed black ;
+    background: rgb(46, 235, 62);
+}
+
+/* This is the main content of the page */
+.mainBody{
+    width: 70%;
+    background: rgb(224, 29, 208);
+    padding-top: 15px;
+}
+
+/* This is the leftSideBar and the mainBody */
+.menuBody{
+    width: 100%;
+    float:left;
+}
+
+a{
+    border: 5px solid black;
+    font-size: 20px;
+}
+
+/* For photo crediting */
+.link-noBorder{
+    border: 0;
+    margin-right: 5px;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h2 { 
+    text-align: center; 
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 35px;
+}
+
+h6 {
+    text-align: right;
+    padding-bottom: 10px; 
+}
+
+img{
+    border: 5px dashed black;
+    border-radius: 20px;
+    margin-bottom: 15px; 
+}
+
+.card{
+    border: 5px solid black;
+    width: 300px; 
+    /* width: 40%; */
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+/* This allows any transition listed to last 5 seconds */
+.card-body{
+    transition: all 5s;
+}
+
+/* CSS transition which makes cards spin, change background color and change text color */
+.card-body:hover {
+    transform:rotate(360deg);
+    color: yellow;
+    background-color:rgb(0, 0, 0);  
+}
+
+/* CSS animation: h2 targeted words to grow/shrink */
+@keyframes grow-shrink {
+    25%,
+    75% {
+      scale: 100%;
+    }
+  
+    50% {
+      scale: 200%;
+      color: magenta;
+    }
+  }
+  
+  h2 span {
+    display: inline-block;
+    animation-duration: 3s;
+    animation-name: grow-shrink;
+  }
+  
+  @keyframes slide-in {
+    from {
+      translate: 150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+  
+  @keyframes grow-shrink {
+    25%,
+    75% {
+      scale: 100%;
+    }
+  
+    50% {
+      scale: 200%;
+      color: magenta;
+    }
+  }
+ 
+/* any section with cards in it */
+.allCardsInHere{
+    display:flex; 
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+/* slide in CSS animation on <p> text */
+p {
+    animation-duration: 3s;
+    animation-name: slide-in;
+  }
+  
+  @keyframes slide-in {
+    from {
+      translate: 150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+
+  /* right column section (pink), second half - bottom */
+.right-part2{
+    border-top: 5px dashed black;
+    padding-top: 10px;
+    }
+
+.videos {
+border: 5px dotted yellow;
+padding: 10px; 
+text-align: center;
+margin-bottom: 10px;
+}
+
+form { 
+    text-align: center;
+    border: 5px dashed black;
+    border-radius: 50px;
+    font-weight: bold;
+    width:fit-content; 
+    padding: 20px;
+    font-size: 20px;
+    background-color: yellowgreen;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* FONTS */
+
+a, h3, h4, .btn-group  {
+    font-family: "Sriracha", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  h1, h2, h6, form, .card-title, th {
+    font-family: "Racing Sans One", serif;
+    font-weight: 400;
+    font-style: normal; 
+  }
+
+  p, blockquote, tr {
+    font-family: "Nothing You Could Do", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:25px;
+  }
